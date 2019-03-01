@@ -1,7 +1,13 @@
-// Given two positive integers, find out if the two numbers have
-// the same frequency of digits.
+/*
+  
+Given two positive integers, find out if the two numbers have
+the same frequency of digits.
 
-// Time: O(N)
+Restrictions:
+
+Time - O(n)
+
+*/
 
 function sameFrequency(num1, num2) {
   const numStr1 = num1.toString();
