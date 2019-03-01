@@ -12,17 +12,11 @@ function validAnagram(str1, str2) {
   }
   
   for (let char of str2) {
-    if (!(char in charFrequencyBalanceCounter)) {
+    if (!charFrequencyBalanceCounter[char]) {
       return false;
     }
 
     charFrequencyBalanceCounter[char] -= 1;
-  }
-
-  for (let frequencyBalance of Object.values(charFrequencyBalanceCounter)) {
-    if (frequencyBalance !== 0) {
-      return false;
-    }
   }
 
   return true;
