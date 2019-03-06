@@ -1,6 +1,6 @@
 /*
 
-Write a function that accepts a string and returns 
+Write a recursive function that accepts a string and returns 
 a new string in reverse.
 
 */
