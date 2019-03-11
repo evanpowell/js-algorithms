@@ -9,7 +9,7 @@ function binarySearch(arr, val) {
   let currentVal;
 
 
-  while (left < right) {
+  while (left <= right) {
     i = Math.floor((left + right) / 2);
     currentVal = arr[i];
 
