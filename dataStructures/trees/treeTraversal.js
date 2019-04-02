@@ -146,4 +146,38 @@ class Tree {
 
     return visitedValues;
   }
+
+  depthFirstSearchPostOrder() {
+    if (!this.root) {
+      return undefined;
+    }
+
+    let visitedValues = [];
+    let stack = new Stack();
+    let current;
+    let child;
+
+    stack.push({
+      node: this.root,
+      currentIndex: 0
+    });
+
+    while (stack.top) {
+      current = stack.top.val;
+
+      child = current.node.children[current.currentIndex];
+      if (child) {
+        current.currentIndex++;
+        stack.push({
+          node:child,
+          currentIndex: 0
+        });
+      } else {
+        visitedValues.push(current.node.val);
+        stack.pop();
+      }
+    }
+
+    return visitedValues;
+  }
 }
