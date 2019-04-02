@@ -44,4 +44,26 @@ class BinarySearchTree {
 
     return false;
   }
+
+  depthFirstSearchInOrder() {
+    if (!this.root) {
+      return [];
+    }
+
+    const visitedValues = [];
+
+    const traverse = (node) => {
+      if (node.left) {
+        traverse(node.left);
+      }
+      visitedValues.push(node.val);
+      if (node.right) {
+        traverse(node.right);
+      }
+    }
+
+    traverse(this.root);
+
+    return visitedValues;
+  }
 }
